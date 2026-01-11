@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Selection | Bhawna Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="nav-wrapper">
+        <header class="premium-nav">
+            <span class="main-logo">BBS CART</span>
+            <a href="index.html" style="color:white; text-decoration:none;">← Back to Home</a>
+        </header>
+    </div>
+
+    <section class="section-padding" style="margin-top:100px;">
+        <h2 class="section-title">Final Selection</h2>
+        
+        <div id="selected-service-display" style="max-width: 800px; margin: 0 auto 30px auto;"></div>
+
+        <div class="booking-card">
+            <h3>Complete Your Booking</h3>
+            <form id="bookingForm">
+                <input type="text" id="custName" placeholder="Your Name" required>
+                <input type="tel" id="custPhone" placeholder="Mobile Number" required>
+                <input type="date" id="bookingDate" required>
+                <button type="submit" class="submit-btn">Book via WhatsApp & Get PDF</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

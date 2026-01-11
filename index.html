@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhawna Beauty Studio | Women Exclusive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <header class="premium-nav">
+            <div class="nav-logo">
+                <span class="main-logo">BBS</span>
+                <span class="sub-logo">WOMEN BEAUTY STUDIO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="cart-link-li">
+                    <a href="checkout.html" style="color: #ff4d94; font-weight: bold;">
+                        <i class="fas fa-shopping-cart"></i> My Selection (<span class="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="hero-buttons">
+    <a href="services.html" class="cta-btn">Book Your Glow</a>
+    <a href="https://wa.me/919140220840" class="cta-btn outline">WhatsApp Now</a>
+</div>
+
+
+    <section class="features">
+    <div class="feature">
+        <i class="fas fa-female"></i>
+        <p>Women Only Studio</p>
+    </div>
+    <div class="feature">
+        <i class="fas fa-certificate"></i>
+        <p>Certified Beautician</p>
+    </div>
+    <div class="feature">
+        <i class="fas fa-spa"></i>
+        <p>Premium Products</p>
+    </div>
+    <div class="feature">
+        <i class="fas fa-shield-alt"></i>
+        <p>100% Hygiene</p>
+    </div>
+</section>
+
+
+    <section class="section-padding" id="services">
+        <h2 class="section-title">Premium Waxing</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=500" alt="Waxing">
+                <div class="service-info">
+                    <h3>White Chocolate Waxing</h3>
+                    <p>Full leg + Full hand + Underarm</p>
+                    <div class="price-row">
+                        <span class="price">₹799</span>
+                        <span class="time"><i class="far fa-clock"></i> 1h 20m</span>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('White Chocolate Waxing', 799, this)">Add to Selection</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500" alt="Rica Waxing">
+                <div class="service-info">
+                    <h3>Rica Waxing (Premium)</h3>
+                    <p>Full leg + Full hand + Underarm</p>
+                    <div class="price-row">
+                        <span class="price">₹1299</span>
+                        <span class="time"><i class="far fa-clock"></i> 1h 45m</span>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('Rica Waxing', 1299, this)">Add to Selection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: #fff0f5;">
+        <h2 class="section-title">Skin Cleanup Rituals</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500" alt="Cleanup">
+                <div class="service-info">
+                    <h3>Fruit Cleanup (5 Steps)</h3>
+                    <p>Glow & Refreshing Skin</p>
+                    <div class="price-row">
+                        <span class="price">₹499</span>
+                        <span class="time"><i class="far fa-clock"></i> 1h 30m</span>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('Fruit Cleanup', 499, this)">Add to Selection</button>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500" alt="O3 Cleanup">
+                <div class="service-info">
+                    <h3>O3+ Premium Cleanup</h3>
+                    <p>Instant Brightening & Detan</p>
+                    <div class="price-row">
+                        <span class="price">₹799</span>
+                        <span class="time"><i class="far fa-clock"></i> 1h</span>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('O3+ Cleanup', 799, this)">Add to Selection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-padding why-us">
+    <h2 class="section-title">Why Choose Bhawna Beauty Studio?</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card why-card">
+            <div class="service-info">
+                <i class="fas fa-lock"></i>
+                <h3>Private & Comfortable</h3>
+                <p>No rush, no crowd – only you & your beauty time.</p>
+            </div>
+        </div>
+
+        <div class="service-card why-card highlight">
+            <div class="service-info">
+                <i class="fas fa-heart"></i>
+                <h3>Personal Attention</h3>
+                <p>Each client handled with care & patience.</p>
+            </div>
+        </div>
+
+        <div class="service-card why-card">
+            <div class="service-info">
+                <i class="fas fa-star"></i>
+                <h3>Trusted by Women</h3>
+                <p>Loved by 500+ happy customers in Kanpur.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- BRAND INFO -->
+        <div class="footer-col">
+            <h3>Bhawna Beauty Studio</h3>
+            <p>
+                A women-exclusive beauty studio offering premium waxing,
+                cleanup & skin care services with complete privacy and hygiene.
+            </p>
+            <p class="women-only">✨ Services for Women Only ✨</p>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="footer-col">
+            <h4>Our Services</h4>
+            <ul>
+                <li>White Chocolate Waxing</li>
+                <li>Gel & Rica Waxing</li>
+                <li>Rica Roll-On Waxing</li>
+                <li>Fruit Cleanup</li>
+                <li>O3+ & Oxylife Cleanup</li>
+            </ul>
+        </div>
+
+        <!-- LOCATIONS -->
+        <div class="footer-col">
+            <h4>Service Available In</h4>
+            <ul>
+                <li>Kalyanpur</li>
+                <li>Rawatpur</li>
+                <li>Govind Nagar</li>
+                <li>Kakadeo</li>
+                <li>Nawabganj</li>
+                <li>Swaroop Nagar</li>
+                <li>Kidwai Nagar</li>
+                <li>Barra</li>
+                <li>Naubasta</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-col">
+            <h4>Contact & Booking</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Kanpur, Uttar Pradesh</p>
+            <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp Booking Available</p>
+            <p><i class="far fa-clock"></i> 10:00 AM – 8:00 PM</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Bhawna Beauty Studio, Kanpur. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

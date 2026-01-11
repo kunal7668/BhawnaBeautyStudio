@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS | Confirm Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background: #fffafb; padding-bottom: 50px;">
+    
+    <div style="padding: 30px 10%; text-align: center;">
+        <h2 style="color: #ff4d94; font-family: 'Playfair Display';">Your Selected Services</h2>
+        
+        <div id="cart-list" style="margin: 30px auto; max-width: 500px; text-align: left; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            </div>
+
+
+            <div style="max-width: 500px; margin: auto; padding: 20px;">
+    <input type="text" id="custName" placeholder="Full Name" style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd;">
+    
+    <input type="email" id="custEmail" placeholder="Email Address" style="width: 100%; padding: 12px; margin-bottom: 10px; border-radius: 8px; border: 1px solid #ddd;">
+    
+    <textarea id="custAddress" placeholder="Full Address (House No, Area, Landmark)" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 8px; border: 1px solid #ddd; height: 80px;"></textarea>
+
+    <button onclick="sendBooking()" style="width: 100%; background: #25D366; color: white; padding: 15px; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer;">
+        <i class="fab fa-whatsapp"></i> Confirm Booking on WhatsApp
+    </button>
+</div>
+
+            
+            <br><br>
+            <a href="index.html#services" style="color: #ff4d94; text-decoration: none; font-weight: 600;">+ Add More Services</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Special Display Logic for Checkout Page
+        function displayCartItems() {
+            let cart = JSON.parse(localStorage.getItem("bhawnaCart")) || [];
+            let listDiv = document.getElementById('cart-list');
+            
+            if(cart.length === 0) {
+                listDiv.innerHTML = "<p style='text-align:center; padding:20px;'>No services selected yet.</p>";
+                return;
+            }
+            
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            let itemsHtml = cart.map((item, index) => `
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom: 1px solid #eee;">
+                    <span style="font-weight: 500;">${item.name}</span>
+                    <span style="color: #ff4d94; font-weight: 600;">
+                        ₹${item.price} 
+                        <i class="fas fa-trash-alt" onclick="deleteFromCart(${index})" style="color:#ff4d4d; margin-left:15px; cursor:pointer;"></i>
+                    </span>
+                </div>
+            `).join('');
+            
+            listDiv.innerHTML = itemsHtml + `
+                <div style="margin-top:20px; text-align:right;">
+                    <h3 style="color:#ff4d94; font-size: 1.4rem;">Total: ₹${total}</h3>
+                </div>`;
+        }
+
+        // Specific function to delete from checkout page
+        function deleteFromCart(index) {
+            let cart = JSON.parse(localStorage.getItem("bhawnaCart")) || [];
+            cart.splice(index, 1);
+            localStorage.setItem("bhawnaCart", JSON.stringify(cart));
+            displayCartItems(); // Refresh list
+            if(typeof updateCartCount === 'function') updateCartCount(); // Refresh Nav Count
+        }
+
+        // Initialize display
+        window.addEventListener('load', displayCartItems);
+    </script>
+</body>
+</html>

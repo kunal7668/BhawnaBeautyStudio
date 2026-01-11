@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS | Ladies Special</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <header class="premium-nav">
+            <div class="nav-logo">
+                <span class="main-logo">BBS</span>
+                <span class="sub-logo">BEAUTY STUDIO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#booking">My Selection</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <section class="internal-hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200') center/cover;">
+        <h1>Ladies' Special</h1>
+        <p>Premium care for the Queen in you</p>
+    </section>
+
+    <section class="section-padding">
+        <h2 class="section-title">Select Category</h2>
+        <div class="service-grid">
+            <div class="category-card" onclick="location.href='hair.html'">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=500" alt="Hair">
+                <div class="cat-overlay">
+                    <h3>Hair Styling</h3>
+                    <p>Spa, Color & More</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="location.href='skin.html'">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500" alt="Skin">
+                <div class="cat-overlay">
+                    <h3>Skin & Facial</h3>
+                    <p>Glow & Therapy</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="location.href='makeup.html'">
+                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=500" alt="Makeup">
+                <div class="cat-overlay">
+                    <h3>Pro Makeup</h3>
+                    <p>Bridal & Party</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="location.href='nail.html'">
+                <img src="https://i.pinimg.com/originals/8b/9d/fc/8b9dfc98c906df8761f6c86924c0fbd6.jpg" alt="Nail">
+                <div class="cat-overlay">
+                    <h3>Nail Art</h3>
+                    <p>Extensions & Design</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="selected-service-display" style="display:none;"></div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="cta-btn" style="text-decoration:none;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Bhawna Beauty Studio Kanpur</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

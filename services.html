@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS STUDIO | Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #ff4d94;
+            --dark: #2d2d2d;
+            --white: #ffffff;
+            --bg: #fffafb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        
+        body { background-color: var(--bg); color: var(--dark); overflow-x: hidden; }
+
+        /* NAVBAR */
+        .nav-wrapper { 
+            background: var(--white); 
+            padding: 10px 5%; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 70px;
+        }
+        .main-logo { color: var(--primary); font-family: 'Playfair Display'; font-size: 1.5rem; font-weight: bold; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .cart-link { color: var(--dark); text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .cart-link:hover { color: var(--primary); }
+
+        /* PAGE HEADER */
+        .header-section { text-align: center; padding: 40px 5%; background: var(--bg); }
+        .header-section h2 { font-family: 'Playfair Display'; color: var(--primary); font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 5px; }
+        .header-section p { color: #666; font-size: 0.9rem; }
+
+        /* TABLE CONTAINER */
+        .service-list-section { padding: 20px 5% 100px 5%; }
+        .service-table-container { 
+            width: 100%; 
+            overflow-x: auto; 
+            background: white; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        }
+        
+        .premium-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        .premium-table th { background: var(--primary); color: white; padding: 15px; text-align: left; }
+        .premium-table td { padding: 15px; border-bottom: 1px solid #f0f0f0; vertical-align: middle; }
+
+        /* ADD BUTTON */
+        .add-to-cart { 
+            background: var(--primary); 
+            color: white; 
+            border: none; 
+            padding: 8px 20px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 77, 148, 0.2);
+        }
+        .add-to-cart:hover { background: var(--dark); transform: translateY(-2px); }
+
+        /* FLOATING CART BUTTON */
+        .floating-cart { 
+            position: fixed; 
+            bottom: 25px; 
+            right: 25px; 
+            background: #25D366; 
+            color: white; 
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .nav-wrapper { padding: 10px 3%; height: auto; flex-direction: column; gap: 10px; text-align: center;}
+            .nav-links { gap: 15px; padding-bottom: 5px; }
+            .service-table-container { border-radius: 10px; }
+            .premium-table th, .premium-table td { padding: 12px 10px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-wrapper">
+        <div class="nav-logo">
+            <span class="main-logo">BBS STUDIO</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="cart-link">Home</a>
+            <a href="checkout.html" class="cart-link" style="color: var(--primary);">
+                <i class="fas fa-shopping-cart"></i> Selection (<span class="cart-count">0</span>)
+            </a>
+        </div>
+    </nav>
+
+    <div class="header-section">
+        <h2>Beauty Menu</h2>
+        <p>Premium Waxing & Cleanup Services for Women</p>
+    </div>
+
+    <section class="service-list-section">
+        <div class="service-table-container">
+            <table class="premium-table">
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="master-service-list">
+                    <tr><td>White Chocolate Waxing</td><td>₹799</td><td><button class="add-to-cart" onclick="addToCart('White Chocolate Waxing', 799, this)">Add</button></td></tr>
+                    <tr><td>Gel Waxing</td><td>₹999</td><td><button class="add-to-cart" onclick="addToCart('Gel Waxing', 999, this)">Add</button></td></tr>
+                    <tr><td>Rica Waxing</td><td>₹1299</td><td><button class="add-to-cart" onclick="addToCart('Rica Waxing', 1299, this)">Add</button></td></tr>
+                    <tr><td>Rica Roll-On Waxing</td><td>₹1499</td><td><button class="add-to-cart" onclick="addToCart('Rica Roll-On Waxing', 1499, this)">Add</button></td></tr>
+                    <tr><td>Fruits Cleanup (5 Steps)</td><td>₹499</td><td><button class="add-to-cart" onclick="addToCart('Fruits Cleanup', 499, this)">Add</button></td></tr>
+                    <tr><td>Oxylife Cleanup</td><td>₹599</td><td><button class="add-to-cart" onclick="addToCart('Oxylife Cleanup', 599, this)">Add</button></td></tr>
+                    <tr><td>O3+ Cleanup</td><td>₹799</td><td><button class="add-to-cart" onclick="addToCart('O3+ Cleanup', 799, this)">Add</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <a href="checkout.html" class="floating-cart">
+        <span>Check Selection</span> <i class="fas fa-arrow-right"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

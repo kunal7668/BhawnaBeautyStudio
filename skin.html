@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS | Skin & Facial Care</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <header class="premium-nav">
+            <div class="nav-logo">
+                <span class="main-logo">BBS</span>
+                <span class="sub-logo">BEAUTY STUDIO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#booking"><i class="fas fa-shopping-cart"></i> My Selection</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <section class="internal-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1200') center/cover;">
+        <h1>Skin & Facial Care</h1>
+        <p>Glow like never before with our expert treatments</p>
+    </section>
+
+    <section class="service-list-section">
+        <div class="service-table-container">
+            <table class="premium-table">
+                <thead>
+                    <tr>
+                        <th>Service Name</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>O3+ Diamond Facial</td>
+                        <td>₹2499</td>
+                        <td><button class="add-to-cart table-btn" data-name="O3+ Diamond Facial" data-price="2499">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Rica Waxing (Full Body)</td>
+                        <td>₹1299</td>
+                        <td><button class="add-to-cart table-btn" data-name="Rica Waxing" data-price="1299">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>De-Tan Therapy</td>
+                        <td>₹499</td>
+                        <td><button class="add-to-cart table-btn" data-name="De-Tan Therapy" data-price="499">Add</button></td>
+                    </tr>
+                    <tr>
+                        <td>Hydra Facial (Premium)</td>
+                        <td>₹3999</td>
+                        <td><button class="add-to-cart table-btn" data-name="Hydra Facial" data-price="3999">Add</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="selected-service-display" style="display:none;"></div>
+
+        <div style="margin-top: 40px; text-align: center;">
+            <a href="female.html" class="cta-btn" style="text-decoration:none;"><i class="fas fa-arrow-left"></i> Back to Categories</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Bhawna Beauty Studio Kanpur</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

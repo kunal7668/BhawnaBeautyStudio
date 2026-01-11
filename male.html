@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBS | Gentlemen's Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav-wrapper">
+        <header class="premium-nav">
+            <div class="nav-logo">
+                <span class="main-logo">BBS</span>
+                <span class="sub-logo">BEAUTY STUDIO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#booking">My Selection</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <section class="internal-hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200') center/cover;">
+        <h1>Gentlemen's Menu</h1>
+        <p>Sharp looks for the modern man</p>
+    </section>
+
+    <section class="section-padding">
+        <h2 class="section-title">Select Service Category</h2>
+        <div class="service-grid">
+            <div class="category-card" onclick="location.href='men.html'">
+                <img src="https://nationaltoday.com/wp-content/uploads/2022/02/Barbers-Day-1200x834.jpg" alt="Barber">
+                <div class="cat-overlay">
+                    <h3>Hair & Grooming</h3>
+                    <p>Cut, Beard & Massage</p>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="location.href='men-skin.html'">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=500" alt="Skin Care">
+                <div class="cat-overlay">
+                    <h3>Skin Care</h3>
+                    <p>Facials & Clean-up</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="selected-service-display" style="display:none;"></div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="cta-btn" style="text-decoration:none;"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Bhawna Beauty Studio Kanpur</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
