@@ -117,10 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# MEDIA FILES SETTING (Future me kaam aayegi jab salon ke images models se load honge)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
