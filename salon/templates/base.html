@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bhawna Beauty Studio</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="nav-wrapper">
+    <header class="premium-nav">
+
+        <div class="nav-logo">
+            <span class="main-logo">BBS</span>
+            <span class="sub-logo">WOMEN BEAUTY STUDIO</span>
+        </div>
+
+       <ul class="nav-links">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'about' %}">About Us</a></li>          <!-- Naya Link -->
+    <li><a href="{% url 'experience' %}">Experience</a></li> <!-- Naya Link -->
+    <li><a href="{% url 'services' %}">Services</a></li>
+    <li>
+        <a href="{% url 'checkout' %}">
+            <i class="fas fa-shopping-cart"></i>
+            Selection (<span class="cart-count">0</span>)
+        </a>
+    </li>
+</ul>
+
+    </header>
+</div>
+
+{% block content %}{% endblock %}
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        
+        <div class="footer-col brand-info">
+            <h3 class="footer-logo">BBS</h3>
+            <span class="footer-sublogo">BHAWNA BEAUTY STUDIO</span>
+            <p class="brand-desc">
+                Experience luxury salon and bridal makeup services in the comfort of your home. We bring certified professionals and premium international products right to your doorstep.
+            </p>
+            <div class="footer-socials">
+                <a href="https://wa.me/919140220840" target="_blank" class="ws-icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" class="insta-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col links">
+            <h4>Our Services</h4>
+            <ul>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Bridal Makeup</a></li>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Party Makeovers</a></li>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Premium Facials & Spa</a></li>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Hair Styling & Keratin</a></li>
+                <li><a href="{% url 'services' %}"><i class="fas fa-chevron-right"></i> Luxury Manicure/Pedicure</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col timing">
+            <h4>Studio Hours</h4>
+            <ul class="time-list">
+                <li><span>Monday - Saturday:</span> <span>10:00 AM - 07:00 PM</span></li>
+                <li><span>Sunday:</span> <span>11:00 AM - 05:00 PM</span></li>
+                <li class="notice"><i class="fas fa-info-circle"></i> Prior Booking Recommended</li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact">
+            <h4>Get In Touch</h4>
+            <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <p>+91 9140220840</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@bhawnabeautystudio.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Premium Home Services Across Kanpur, Uttar Pradesh</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Bhawna Beauty Studio. Crafted for Queens.</p>
+    </div>
+</footer>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

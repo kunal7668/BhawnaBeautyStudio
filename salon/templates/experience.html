@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    :root { --nude-exp: #f8f4f0; --gold: #c5a059; }
+    .experience-page-wrapper { background: var(--nude-exp); color: var(--dark); padding-bottom: 40px; }
+    
+    .header-section { padding: 80px 10% 40px; text-align: center; background: #fff; }
+    .exp-badge { display: inline-block; padding: 8px 25px; border: 1px solid var(--gold); color: var(--gold); border-radius: 50px; font-weight: 600; letter-spacing: 2px; margin-bottom: 20px; font-size: 0.8rem; }
+    .header-section h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 0; color: var(--dark); }
+
+    .cert-container { padding: 60px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+    
+    .cert-card { background: #fff; padding: 40px; border-radius: 5px; text-align: center; position: relative; transition: 0.4s; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+    .cert-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(197, 160, 89, 0.1); }
+    
+    .icon-box { width: 80px; height: 80px; background: var(--nude-exp); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; color: var(--gold); font-size: 2rem; }
+    
+    .academy-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 5px; color: var(--gold); }
+    .specialization { font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; margin-bottom: 15px; display: block; color: var(--dark); }
+    .cert-desc { font-size: 0.95rem; color: #666; line-height: 1.6; margin: 0; }
+
+    .divider { width: 50px; height: 2px; background: var(--gold); margin: 20px auto; }
+</style>
+
+<div class="experience-page-wrapper">
+    <section class="header-section">
+        <div class="exp-badge">ESTABLISHED EXPERTISE</div>
+        <h1>5 Years of Experience</h1>
+        <p style="color: #888; margin-top: 15px; margin-bottom: 0;">Certified by the world's leading beauty academies to bring professional excellence to your home.</p>
+    </section>
+
+    <div class="cert-container">
+        
+        <div class="cert-card">
+            <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
+            <span class="specialization">Makeup Specialist</span>
+            <div class="academy-name">Lakme Academy</div>
+            <div class="divider"></div>
+            <p class="cert-desc">Professionally certified in HD Bridal, Engagement, and Party Makeup artistry with advanced color theory.</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="icon-box"><i class="fas fa-spa"></i></div>
+            <span class="specialization">Skin Expert</span>
+            <div class="academy-name">VLCC Certified</div>
+            <div class="divider"></div>
+            <p class="cert-desc">Master certification in advanced Skin treatments, Facials, and therapeutic clinical skin care procedures.</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="icon-box"><i class="fas fa-cut"></i></div>
+            <span class="specialization">Hair Scientist</span>
+            <div class="academy-name">Jawed Habib</div>
+            <div class="divider"></div>
+            <p class="cert-desc">Expert training in international hair cutting techniques, chemical treatments, Botox, and Nanoplastia.</p>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; padding-bottom: 40px; padding-top: 20px;">
+        <p style="font-style: italic; color: #999; margin-bottom: 20px;">"Quality is never an accident; it is always the result of intelligent effort."</p>
+        <a href="{% url 'home' %}" style="color: var(--gold); text-decoration: none; font-weight: bold; border-bottom: 1px solid var(--gold);">Back to Home</a>
+    </div>
+</div>
+{% endblock %}

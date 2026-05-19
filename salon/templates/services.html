@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="checkout-btn-wrapper">
+
+    <a href="{% url 'checkout' %}" class="checkout-page-btn">
+
+        Proceed to Checkout
+        (<span class="cart-count">0</span>)
+
+    </a>
+
+</div>
+
+</section>
+
+<section class="section-padding">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="service-grid">
+
+        <!-- Django Loop Start -->
+        {% for service in services %}
+        <div class="service-card">
+            <!-- Agar image URL admin ne dala h to wo dikhega, nahi to default fallback image -->
+            <img src="{% if service.image_url %}{{ service.image_url }}{% else %}https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=500{% endif %}" alt="{{ service.title }}">
+
+            <div class="service-info">
+                <h3>{{ service.title }}</h3>
+
+                <div class="price-row">
+                    <span>{{ service.package_name }}</span>
+                    <span class="price">₹{{ service.price }}</span>
+                </div>
+
+                <!-- JavaScript functions me dynamic values paas ho rhi hain -->
+                <button class="add-to-cart"
+                        onclick="addToCart('{{ service.title|escapejs }}', {{ service.price }}, this)">
+                    Add to Selection
+                </button>
+            </div>
+        </div>
+        {% empty %}
+        <p style="text-align: center; grid-column: 1/-1; color: #888;">Abhi koi services available nahi hain. Admin panel se add karein!</p>
+        {% endfor %}
+        <!-- Django Loop End -->
+
+    </div>
+
+</section>
+
+{% endblock %}

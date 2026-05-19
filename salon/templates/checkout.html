@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="section-padding checkout-section">
+
+    <div class="checkout-container">
+
+        <h2 class="section-title">
+            Your Selected Services
+        </h2>
+
+        <!-- CART ITEMS -->
+        <div id="cart-list" class="checkout-cart-list"></div>
+
+        <!-- TOTAL -->
+        <div id="totalBill" class="total-bill"></div>
+
+        <!-- FORM -->
+        <div class="booking-form-card">
+
+            <h3>Enter Your Details</h3>
+
+            <div class="input-group">
+                <input type="text"
+                       id="custName"
+                       placeholder="Full Name"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <input type="tel"
+                       id="custPhone"
+                       placeholder="Phone Number"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <input type="email"
+                       id="custEmail"
+                       placeholder="Email Address"
+                       required>
+            </div>
+
+            <div class="input-group">
+                <textarea id="custAddress"
+                          placeholder="Complete Address"
+                          rows="4"
+                          required></textarea>
+            </div>
+
+            <button class="cta-btn whatsapp-submit-btn"
+                    onclick="sendBooking()">
+
+                <i class="fab fa-whatsapp"></i>
+                Confirm Booking on WhatsApp
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
