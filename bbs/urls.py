@@ -8,6 +8,4 @@ urlpatterns = [
     path('', include('salon.urls')),
 ]
 
-# Local development par static aur media files dikhane ke liye ye zaroori hai
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
